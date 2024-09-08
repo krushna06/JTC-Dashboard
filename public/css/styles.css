@@ -23,10 +23,18 @@ ul {
 }
 
 li {
+    display: flex;
+    align-items: center;
     background: #eaeaea;
     margin: 10px 0;
     padding: 10px;
 }
+
+li img {
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
 
 .btn {
     display: inline-block;

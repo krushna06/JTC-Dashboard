@@ -13,7 +13,14 @@
         <ul>
             <% guilds.forEach(guild => { %>
                 <li>
-                    <%= guild.name %>
+                    <img 
+                        src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon ? guild.icon : '' %>.png" 
+                        alt="<%= guild.name %>" 
+                        width="64" 
+                        height="64" 
+                        onerror="this.src='/images/default_icon.png';"
+                    >
+                    <strong><%= guild.name %></strong>
                     <a href="/guild/<%= guild.id %>/manage" class="btn">Manage</a>
                 </li>
             <% }) %>
