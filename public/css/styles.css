@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -21,7 +23,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-ul.guild-list {
+.guild-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -75,4 +77,36 @@ ul.guild-list {
 
 .logout-btn:hover {
     background: #e84118;
+}
+
+.channels-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.channel-box {
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.channel-box h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.channel-box p {
+    margin: 5px 0;
+}
+
+.channel-box p strong {
+    color: #555;
 }

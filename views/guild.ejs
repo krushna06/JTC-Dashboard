@@ -9,15 +9,19 @@
 <body>
     <div class="container">
         <h1>Active Channels for Guild: <%= guildId %></h1>
-        <ul>
-            <% Object.keys(activeChannels).forEach(channelId => { %>
-                <li>
-                    Channel ID: <%= channelId %> <br>
-                    Created At: <%= new Date(activeChannels[channelId].createdAt).toLocaleString() %> <br>
-                    Owner ID: <%= activeChannels[channelId].ownerId %>
-                </li>
-            <% }) %>
-        </ul>
+        <div class="channels-container">
+            <% if (Object.keys(activeChannels).length > 0) { %>
+                <% Object.keys(activeChannels).forEach(channelId => { %>
+                    <div class="channel-box">
+                        <h2>Channel ID: <%= channelId %></h2>
+                        <p><strong>Created At:</strong> <%= new Date(activeChannels[channelId].createdAt).toLocaleString() %></p>
+                        <p><strong>Owner ID:</strong> <%= activeChannels[channelId].ownerId %></p>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No active channels found.</p>
+            <% } %>
+        </div>
         <a href="/dashboard" class="btn">Back to Dashboard</a>
     </div>
 </body>
