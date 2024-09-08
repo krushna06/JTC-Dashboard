@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background: #fff;
@@ -17,31 +17,62 @@ h1 {
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+h2 {
+    margin-bottom: 20px;
 }
 
-li {
+ul.guild-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guild-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: #eaeaea;
     margin: 10px 0;
     padding: 10px;
-}
-
-li img {
-    margin-right: 15px;
     border-radius: 8px;
 }
 
+.guild-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.guild-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guild-name {
+    margin: 0;
+    font-size: 18px;
+}
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 10px;
     background: #7289da;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.logout-btn {
+    background: #ff4757;
+}
+
+.btn:hover {
+    background: #5a6abf;
+}
+
+.logout-btn:hover {
+    background: #e84118;
 }

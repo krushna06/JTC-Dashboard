@@ -10,22 +10,23 @@
     <div class="container">
         <h1>Welcome, <%= user.username %></h1>
         <h2>Your Mutual Guilds</h2>
-        <ul>
+        <ul class="guild-list">
             <% guilds.forEach(guild => { %>
-                <li>
+                <li class="guild-item">
                     <img 
                         src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon ? guild.icon : '' %>.png" 
                         alt="<%= guild.name %>" 
-                        width="64" 
-                        height="64" 
+                        class="guild-icon"
                         onerror="this.src='/images/default_icon.png';"
                     >
-                    <strong><%= guild.name %></strong>
-                    <a href="/guild/<%= guild.id %>/manage" class="btn">Manage</a>
+                    <div class="guild-info">
+                        <strong class="guild-name"><%= guild.name %></strong>
+                        <a href="/guild/<%= guild.id %>/manage" class="btn">Manage</a>
+                    </div>
                 </li>
             <% }) %>
         </ul>
-        <a href="/logout" class="btn">Logout</a>
+        <a href="/logout" class="btn logout-btn">Logout</a>
     </div>
 </body>
 </html>
